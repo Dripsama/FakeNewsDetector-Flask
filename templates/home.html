@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="static/main.css" />
+  </head>
+  <body>
+    <div class="App">
+      <nav class="navbar">
+        <b>
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Dataset</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Code</a>
+            </li>
+          </ul>
+        </b>
+      </nav>
+
+      <div class="centerarea">
+        <div class="heading">
+          <h1>Fake News Detection</h1>
+          <h2>using Deep Learning</h2>
+        </div>
+        <div class="displayarea">
+          <div class="row">
+            <div class="display-tc">
+              <form method="POST" action="">
+                {{ form.hidden_tag() }}
+                <!-- <div class="text-center">
+								<div class="form-group">
+									<textarea class="form-control overflow-auto"  id="email">Enter text here...</textarea>
+									<br><br>
+									<p>
+										<a href="#" class="btn btn-primary btn-lg m-2">Generate</a> 
+										<a href="#" class="btn btn-primary btn-lg m-2">Predict</a>
+									</p>
+								</div>
+							</div> -->
+                <div class="text-center">
+                  <div class="form-group">
+                    {% if form.original_text.errors %} {{
+                    form.original_text(class="form-control overflow-auto") }}
+                    <div class="invalid-feedback">
+                      {% for error in form.original_text.errors %}
+                      <span>{{ error }}</span>
+                      {% endfor %}
+                    </div>
+
+                    {% else %} {{ form.original_text(class="form-control
+                    overflow-auto", id="email") }} {% endif %}
+                    <br />
+                    <p>
+                      {{ form.generate(class="btn btn-primary btn-lg m-2") }} {{
+                      form.predict(class="btn btn-primary btn-lg m-2") }}
+                    </p>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="text-center">
+              <br />
+              {% if output %}
+              <div class="form-group">
+                <p>
+                  <a href="#" class="btn btn-primary btn-lg"
+                    ><strong>Prediction : {{output['prediction']}}</strong></a
+                  >
+                </p>
+              </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
