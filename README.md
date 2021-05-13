@@ -19,6 +19,10 @@ to deactivate:
 ```
 deactivate 
 ```
+## Install dependencies:
+```
+pip install -r requirements.txt
+```
 
 ## To run Flask app:
 ```
