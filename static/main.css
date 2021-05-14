@@ -6,7 +6,6 @@
 }
 
 body {
-  padding-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,7 +20,6 @@ body {
   justify-content: center;
   background-color: #393e46;
   color: #eeeeee;
-  border-radius: 19px;
 }
 
 .nav-item {
@@ -45,6 +43,5 @@ body {
 }
 
 textarea {
-  width: 600px !important;
-  height: 230px !important;
+  width: 500px !important;
 }
