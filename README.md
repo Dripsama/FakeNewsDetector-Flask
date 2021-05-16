@@ -1,5 +1,5 @@
 # FakeNewsDetector-Flask
-Flask app that uses the [fake/real-news-dataset](https://www.kaggle.com/clmentbisaillon/fake-and-real-news-dataset) to create a Machine Learning Model
+Flask app that uses the [fake/real-news-dataset](https://www.kaggle.com/clmentbisaillon/fake-and-real-news-dataset) to create a Machine-Learning Model
 
 
 ## To run virtaul environment
