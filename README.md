@@ -7,7 +7,7 @@ Flask app that uses the [fake/real-news-dataset](https://www.kaggle.com/clmentbi
 pip3 install virtualenv
 ```
 
-create venv file:
+create virtual-environment file:
 ```
 python -m virtualenv venv 
 ```
