@@ -29,7 +29,7 @@ pip install -r requirements.txt
 ```
 flask run
 ```
-debug mode in powershell:
+debug mode:
 ```
 $env:FLASK_ENV = "development"
 ```
